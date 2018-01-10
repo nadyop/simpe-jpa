@@ -70,7 +70,7 @@ public class CustomerController {
             produces = MediaType.APPLICATION_JSON_VALUE //content type
     )
 
-    public Customer deleteCustomer(@PathVariable(value = "id") String id){
-        return customerService.deleteCustomer(id);
+    public void deleteCustomer(@PathVariable(value = "id") String id){
+        customerService.deleteCustomer(id);
     }
 }

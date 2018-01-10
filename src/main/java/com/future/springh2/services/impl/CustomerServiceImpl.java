@@ -52,10 +52,10 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public Customer deleteCustomer(String id) {
-        Customer customer = customerRepository.findOne(id);
+    public void deleteCustomer(String id) {
+        Customer customer = customerRepository.getOne(id);
         customerRepository.delete(customer);
-        return customer;
+//        return customer;
     }
 
 }
